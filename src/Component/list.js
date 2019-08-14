@@ -1,6 +1,6 @@
 import React from 'react';
-
 import MoviewIcon from './movieIcon';
+
 function List(props){
     
     const {title,list,clickHandler,textButton,loading} = props;

@@ -6,11 +6,13 @@ import  * as actions from '../redux/actions/actions';
 
 function MenuContainer(props){
     useEffect(()=>props.getData(),[]);
-    let removeButton = movie => () =>{
+    let removeButton = movie => (e) =>{
+        e.stopPropagation();
         props.remove('myList',movie);
         props.add('recommendation',movie);
     }
-    let addButton = movie => () =>{
+    let addButton = movie => (e) =>{
+        e.stopPropagation();
         props.remove('recommendation',movie);
         props.add('myList',movie);
     }
