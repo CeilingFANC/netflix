@@ -6,16 +6,18 @@
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 6em;
+
   pointer-events: none;
 }
 
 
 .container {
-  margin-left: 2%;
+  margin-left: 3%;
 }
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 .contain {
@@ -27,22 +29,23 @@
   display: block;
   width: 100%;
   height: auto;
+  display:inline-block;
 }
 
 .overlay {
   position: absolute;
-
   bottom: 0;
   left: 0;
-  height: 20%;
+  height: 9%;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
+  
 }
 
 .contain:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .text {
@@ -52,3 +55,6 @@
   text-align: center;
 }
 
+.icon-title {
+  text-indent: 1em;
+}
