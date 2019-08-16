@@ -3,6 +3,7 @@ const initState = {
     err:null,
     myList:[],
     recommendation:[],
+    list:[],
 }
 
 const listReducer = (state = initState, action) => {
@@ -30,6 +31,7 @@ const listReducer = (state = initState, action) => {
                 err:null,
                 myList:[...action.myList],
                 recommendation:[...action.recommendation],
+                list:[...action.myList,...action.recommendation],
             };
         case "LIST_FETCH_FAIL":
             return {
